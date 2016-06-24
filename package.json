@@ -6,7 +6,7 @@
   "author": "Omnifi",
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.org:briefencounter/website.git"
+    "url": "git@github.com:Omnifi/Angular-Wireframe-App.git"
   },
   "engines": {
     "node": "4.2.1"
