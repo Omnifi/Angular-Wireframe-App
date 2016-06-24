@@ -1,0 +1,95 @@
+/* FullCalendar fc-button themed using Twitter Bootstrap. */
+
+.calendarEvent,
+.unavailableEvent,
+.availableEvent {
+    background-color: @brand-primary;
+    color: @text-lightest;
+    border: solid 1px @brand-primary;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+.unavailableEvent {
+    background-color: @brand-danger;
+    border: solid 1px @brand-danger;
+}
+
+.availableEvent {
+    background-color: @brand-danger;
+    border: solid 1px @brand-danger;
+}
+
+.fc-toolbar {
+    margin-bottom: 15px;
+    h2 {
+        .h3;
+        margin: 8px 0 0;
+    }
+    .fc-button {
+        .btn;
+        height: 43px !important;
+        padding: 10px 10px !important;
+        //.lh-border-radius(0);
+        .lh-box-shadow(none);
+        text-shadow: none;
+        .user-select(none);
+        span {
+            line-height: 0;
+        }
+        &.fc-state-default {
+            .btn-default;
+        }
+        &.fc-state-active {
+            .btn-primary;
+        }
+        &.fc-state-disabled {
+            .disabled;
+        }
+    }
+    .fc-icon {
+        height: 1.5em !important;
+        top: auto !important;
+        margin: auto !important;
+        line-height: 1.1em !important;
+    }
+    .fc-icon::after {
+        font-size:30px;
+        .csstransitions & {
+            margin: 0 !important;
+            top: auto !important;
+            left: auto !important;
+        }
+    }
+    .fc-left {
+        .fc-button {
+            margin-left: 0;
+        }
+        .fc-corner-left {
+            .lh-border-bottom-left-radius(0) !important;
+            .lh-border-top-left-radius(0) !important;
+            &:first-child {
+                .lh-border-bottom-left-radius(4px) !important;
+                .lh-border-top-left-radius(4px) !important;
+            }
+        }
+        .fc-corner-right {
+            .lh-border-bottom-right-radius(0) !important;
+            .lh-border-top-right-radius(0) !important;
+            &:last-child {
+                .lh-border-bottom-right-radius(4px) !important;
+                .lh-border-top-right-radius(4px) !important;
+            }
+        }
+    }
+    .fc-right {
+        .fc-prev-button {
+            .lh-border-bottom-right-radius(0) !important;
+            .lh-border-top-right-radius(0) !important;
+        }
+        .fc-next-button {
+            .lh-border-bottom-left-radius(0) !important;
+            .lh-border-top-left-radius(0) !important;
+        }
+    }
+}

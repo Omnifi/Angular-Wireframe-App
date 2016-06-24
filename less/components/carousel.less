@@ -1,0 +1,98 @@
+/**
+ * Custom Slick Carousel
+ *
+ */
+
+.slick >:not(:first-child) {
+    display: none;
+}
+.slick-initialized >:not(:first-child) {
+    display: block;
+}
+.slick-list,
+.slick-track,
+.slick-slide {
+    z-index: 10;
+    outline: none;
+}
+
+.slick-arrow {
+    .lh-transform(translate(0, -50%));
+    .lh-user-select(none);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: block;
+    font: 100 0/0 Arial;
+    height: 30px;
+    outline: none;
+    position: absolute;
+    top: 40%;
+    width: 30px;
+    z-index: 20;
+    &::after {
+        .lh-transform(rotate(45deg) translate(-50%, -50%));
+        .lh-transform-origin(0 0);
+        border: solid 2px @gray-darker;
+        border-width: 0 0 2px 2px;
+        content: '';
+        height: 14px;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        width: 14px;
+    }
+    &:hover,
+    &:focus {
+        &:after {
+            border-color: @BE-blue;
+        }
+    }
+    &.slick-disabled {
+        opacity: 0.5;
+    }
+    &.slick-prev {
+        left: 20px;
+    }
+    &.slick-next {
+        right: 20px;
+        &::after {
+            .lh-transform(rotate(225deg) translate(-50%, -50%));
+        }
+    }
+}
+
+.slick-dots {
+    bottom: 0;
+    display: block;
+    list-style: none;
+    margin: 10px 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    li {
+        cursor: pointer;
+        display: inline-block;
+        height: 20px;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        width: 20px;
+        button {
+            .lh-border-radius(50%);
+            .lh-user-select(none);
+            background: @gray-light;
+            border: 0;
+            display: inline-block;
+            font: 100 0/0 Arial;
+            height: 10px;
+            margin: 0 5px;
+            outline: none;
+            padding: 0;
+            width: 10px;
+        }
+        &.slick-active button {
+            background: @BE-blue;
+        }
+    }
+}

@@ -1,0 +1,112 @@
+.page-home {
+    .banner {
+        padding: 80px 0;
+        h1 {
+            white-space: nowrap;
+        }
+        @media(max-width: @screen-sm-max) {
+            > div:first-child {
+                margin-top: 3em;
+            }
+            > div {
+                margin-bottom: 3em;
+            }
+        }
+    }
+    .app-banner {
+        h1, p {
+            font-weight: 100;
+            text-align: center;
+            color: @brand-primary;
+        }
+        img.responsive {
+            margin-bottom: -20px;
+        }
+        @media(min-width: @screen-sm-min) {
+            h1, p {
+                text-align: right;
+            }
+            h1 {
+                font-size: 35px;
+                line-height: 40px;
+            }
+            img.responsive {
+                margin-top: 50px;
+            }
+        }
+        @media(min-width: @screen-md-min) {
+            h1 {
+                font-size: 48px;
+                line-height: 54px;
+            }
+            p {
+                font-size: 17px;
+                line-height: 22px;
+            }
+            img.responsive {
+                margin-top: 0;
+            }
+        }
+        @media(min-width: @screen-lg-min) {
+            h1 {
+                font-size: 54px;
+                line-height: 60px;
+            }
+            p {
+                font-size: 25px;
+                line-height: 30px;
+            }
+        }
+    }
+    .app-store-list {
+        text-align: center;
+        margin: 0;
+        li {
+            height: 44px;
+            padding: 0 5px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        @media(min-width: @screen-md-min) {
+            text-align: left;
+            li {
+                padding: 0 20px;
+            }
+        }
+    }
+    .slick {
+        img {
+            max-width: 110px;
+        }
+        .review {
+            margin-top: 15px;
+            padding-bottom: 15px;
+        }
+        @media(min-width: @screen-sm-min) {
+            img {
+                max-width: none;
+            }
+            .review {
+                margin-top: 1em;
+                padding-bottom: 0;
+            }
+        }
+        @media(min-width: @screen-md-min) {
+            .review {
+                margin-top: 2em;
+            }
+        }
+        @media(min-width: @screen-lg-min) {
+            .review {
+                margin-top: 4em;
+            }
+        }
+    }
+    .partner-list {
+        margin: 0;
+        li {
+            height: 80px;
+            text-align: center;
+        }
+    }
+}

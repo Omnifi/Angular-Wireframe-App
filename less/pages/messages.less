@@ -1,0 +1,61 @@
+.page-messages {
+    .badge {
+        margin-top: -3px;
+        vertical-align: middle;
+    }
+    .cta {
+        width: 19%;
+        float: left;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .message-body {
+        width: 62%;
+        float: left;
+        padding: 0 15px;
+        &.large {
+            width: 80%;
+        }
+    }
+    .new-message,
+    .new-offer {
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    .new-offer {
+        padding: 15px;
+        background-color: lighten(@BE-red, 40%);
+        a {
+            color: inherit;
+            text-decoration: underline;
+        }
+    }
+    .jobCompleteMessage {
+        background: @gray-light;
+        margin-top: 15px;
+        padding: 15px;
+        p {
+            margin: 0;
+        }
+    }
+    #fee {
+        .input-group-addon {
+            background-color: @gray;
+            color: @text-lightest;
+            border-color: @gray !important;
+        }
+        input {
+            border-color: @gray !important;
+        }
+    }
+    @media(max-width: @screen-xs-max) {
+        .message-body, .cta {
+            width: 100% !important;
+            padding: 0;
+            clear: both;
+            br {
+                display: none;
+            }
+        }
+    }
+}

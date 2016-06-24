@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="angular-wireframe-app">
+
+<head>
+
+    {% include 'partials/meta.html' %}
+
+    <link rel="stylesheet" href="/dist/style.css">
+
+    <script type="text/javascript">
+        window.api = "{{api}}";
+        window.env = "{{process.env.NODE_ENV}}";
+    </script>
+
+    <script src="/lib/modernizr/modernizr.js"></script>
+    <script src="/dist/header_scripts.js"></script>
+
+    <!--[if IE 9]>
+        <script src="/lib/es5-shim/es5-shim.min.js"></script>
+        <script src="/lib/es5-shim/es5-sham.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    {% include 'partials/header.html' %}
+
+    {% block content %}
+
+    {% endblock %}
+
+    {% include 'partials/footer.html' %}
+
+    <script type="text/javascript" src="/dist/application.js" async></script>
+    {% if process.env.NODE_ENV === 'development' %}
+    <script src="//localhost:35729/livereload.js"></script>
+    {% endif %}
+
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+/**
+ * Add rules for the messaging component
+ */
+
+.conversation {
+    margin: 0 15px 0;
+    li {
+        display: block;
+        padding: 0;
+        margin: 0 0 15px;
+    }
+}
+
+.chat-bubble {
+    margin: 0 15px 15px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    .chat-bubble-message,
+    .chat-bubble-timedate {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 15px;
+    }
+    .chat-bubble-message {
+        position: relative;
+        width: 60%;
+        margin-left: 20%;
+        background: @gray-light;
+        &::after {
+            .pseudo();
+            position: absolute;
+            right: -15px;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 15px 0 15px 15px;
+            border-color: transparent transparent transparent @gray-light;
+        }
+        .reply& {
+            margin-left: 0;
+            margin-right: 20%;
+            background: @BE-green;
+            color: @text-lightest;
+            &::after {
+                left: -15px;
+                right: auto;
+                border-width: 15px 15px 15px 0;
+                border-color: transparent @BE-green transparent transparent;
+            }
+        }
+        .offer&,
+        .decline&,
+        .retract&,
+        .accept& {
+            background-color: lighten(@BE-red, 40%);
+            color: @gray-dark;
+            .btn{
+                color:@text-lightest;
+            }
+            &::after {
+                border-color: transparent transparent transparent lighten(@BE-red, 40%);
+            }
+            .reply&::after {
+                border-color: transparent lighten(@BE-red, 40%) transparent transparent;
+            }
+        }
+        .retract& {
+            background-color: @gray-light;
+            color: @gray-dark;
+            &::after {
+                border-color: transparent transparent transparent @gray-light;
+            }
+            .reply&::after {
+                border-color: transparent @gray-light transparent transparent;
+            }
+        }
+        .accept& {
+            background-color: lighten(@BE-green-dark, 0%);
+            color: @text-lightest;
+            &::after {
+                border-color: transparent transparent transparent lighten(@BE-green-dark, 0%);
+            }
+            .reply&::after {
+                border-color: transparent lighten(@BE-green-dark, 0%) transparent transparent;
+            }
+        }
+    }
+    .chat-bubble-timedate {
+        width: 20%;
+        margin-right: -100px;
+        text-align: center;
+        padding: 0;
+        .read&::after {
+            .glyphicon();
+            content: "\e013";
+            margin-left: 5px;
+        }
+        .read.reply&::after {
+            content: none;
+        }
+        .reply.unread&::after {
+            .pseudo();
+            height: 10px;
+            width: 10px;
+            background-color: @BE-red;
+            vertical-align: middle;
+            .lh-border-radius(50%);
+            margin: 0 -15px 0 5px;
+        }
+    }
+    .chat-bubble-text {
+        padding-left: 20%;
+        .offer&, .decline&, .retract&, .accept& {
+            padding-left: 0;
+        }
+        * {
+            color: inherit;
+        }
+        h4{
+            margin-top:0;
+        }
+    }
+    .chat-bubble-image {
+        float: left;
+        width: 20%;
+        padding-right: 15px;
+    }
+    @media(max-width: @screen-xs-max) {
+        margin: 0 5px;
+        .chat-bubble-message {
+            width: 80%;
+            margin: 0 0 0 20%;
+            .reply& {
+                margin-left: 0;
+            }
+            .offer& {
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+        .chat-bubble-timedate {
+            width: 80%;
+            padding: 5px 0;
+            margin: 0 0 0 20%;
+            .reply& {
+                margin-left: 0;
+            }
+        }
+        .chat-bubble-text {
+            padding-left: 0%;
+        }
+    }
+}

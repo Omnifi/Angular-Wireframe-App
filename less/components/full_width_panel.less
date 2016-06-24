@@ -1,0 +1,112 @@
+.full-width-panel {
+    position: relative;
+    background: @BE-darkblue;
+    min-height: 300px;
+    min-height: 33vh;
+    top: -20px;
+    &::before {
+        background-position: top center;
+        background-size: cover;
+        content: '';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        //.lh-blur(1px);
+        .lh-opacity(0.2);
+    }
+    &.contact-us::before {
+        //background-image: url("/images/old-bailey-l.jpg");
+        background-image: url("/images/resize/be-contact-2.jpg?width=300&height=300&crop");
+    }
+    &.faq::before {
+        //background-image: url("/images/court-room-l.jpg");
+        background-image: url("/images/resize/be-faqs.jpg?width=300&height=250&crop&align=East");
+    }
+    &.how-it-works::before {
+        //background-image: url("/images/police-cell-l.jpg");
+        background-image: url("/images/resize/be-how-it-works-2.jpg?width=300&height=300&crop&align=South");
+    }
+    &.page-home::before {
+        //background-image: url("/images/police-tape-l.jpg");
+        background-image: url("/images/resize/be-contact-2.jpg?width=400&height=1200&crop");
+    }
+    &.why-you-need-this::before {
+        //background-image: url("/images/speed-camera-l.jpg");
+        background-image: url("/images/resize/be-how-it-works.jpg?width=300&height=300&crop&align=west");
+    }
+    @media (min-width: 400px) {
+        &.contact-us::before {
+            background-image: url("/images/resize/be-contact-2.jpg?width=800&height=300&crop&align=center");
+        }
+        &.faq::before {
+            background-image: url("/images/resize/be-faqs.jpg?width=800&height=350&crop&align=north");
+        }
+        &.how-it-works::before {
+            background-image: url("/images/resize/be-how-it-works-2.jpg?width=800&height=300&crop&align=Center");
+        }
+        &.page-home::before {
+            background-image: url("/images/resize/be-contact-2.jpg?width=600&height=1200&crop");
+        }
+        &.why-you-need-this::before {
+            background-image: url("/images/resize/be-how-it-works.jpg?width=800&height=300&crop&align=Center");
+        }
+    }
+    @media (min-width: 767px) {
+        &.contact-us::before {
+            background-image: url("/images/resize/be-contact-2.jpg?width=1200&height=400&crop");
+        }
+        &.faq::before {
+            background-image: url("/images/resize/be-faqs.jpg?width=1200&height=400&crop&align=north");
+            background-position: bottom center;
+        }
+        &.how-it-works::before {
+            background-image: url("/images/resize/be-how-it-works-2.jpg?width=1200&height=400&crop");
+        }
+        &.page-home::before {
+            background-image: url("/images/resize/be-homepage.jpg?width=768&height=300&crop");
+        }
+        &.why-you-need-this::before {
+            background-image: url("/images/resize/be-how-it-works.jpg?width=1200&height=400&crop");
+        }
+    }
+    @media (min-width: 1200px) {
+        &.page-home::before {
+            background-image: url("/images/resize/be-homepage.jpg?width=768&height=200&crop");
+        }
+        &.faq::before {
+            background-image: url("/images/resize/be-faqs.jpg?width=1200&height=320&crop&align=north");
+        }
+        &.why-you-need-this::before {
+            background-image: url("/images/resize/be-how-it-works.jpg?width=1200&height=200&crop");
+        }
+        &.how-it-works::before {
+            background-image: url("/images/resize/be-how-it-works-2.jpg?width=1200&height=200&crop");
+        }
+    }
+}
+
+.csstransforms .full-width-panel:not(.page-home) .container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    margin: 0 auto;
+    .lh-transform(translateX(-50%));
+    h1 {
+        position: absolute;
+        top: 50%;
+        left: 35px;
+        .lh-transform(translateY(-50%));
+        margin: 0;
+    }
+    @media(max-width: @screen-sm-min) {
+        width: 100%;
+        h1 {
+            width: 100%;
+            left: 0;
+            text-align: center;
+        }
+    }
+}

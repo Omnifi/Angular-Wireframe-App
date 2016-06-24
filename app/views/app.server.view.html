@@ -1,0 +1,8 @@
+{% extends 'layout.server.view.html' %}
+
+{% block content %}
+<section ng-if="!stateIsLoading" ng-view class="content"></section>
+<section ng-if="stateIsLoading" class="content text-center">
+	<img src="/images/loader.gif" class="margin-top-lg" />
+</section>
+{% endblock %}

@@ -1,0 +1,99 @@
+    .default-bg {
+    background-position: center center;
+    .lh-background-size(100% auto);
+    background-repeat: no-repeat;
+}
+
+.default-icon {
+    .hide-text();
+    .default-bg();
+    height: 40px;
+    width: 40px;
+    .lh-background-size(100%);
+}
+
+.brief_encounter_logo {
+    .hide-text();
+    .default-bg();
+    width: 220px;
+    background-image: data-uri("../public/svg/brief_encounter_logo.svg");
+    &.white {
+        background-image: data-uri("../public/svg/brief_encounter_logo_white.svg");
+    }
+    img {
+        display: none;
+    }
+    .no-inlinesvg & {
+        background: none;
+        position: relative;
+        img {
+            display: inline-block;
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 7px;
+            left: 0;
+        }
+    }
+}
+
+.icons {
+    .default-icon();
+    &.magnifier {
+        background-image: data-uri("../public/svg/icon-magnifier.svg");
+    }
+    &.magnifier-small {
+        background-image: data-uri("../public/svg/icon-magnifier-small.svg");
+    }
+    &.briefcase {
+        background-image: data-uri("../public/svg/icon-briefcase.svg");
+    }
+    &.diary {
+        background-image: data-uri("../public/svg/icon-calendar.svg");
+    }
+    &.office {
+        background-image: data-uri("../public/svg/icon-office.svg");
+    }
+    &.chat {
+        background-image: data-uri("../public/svg/icon-chat.svg");
+    }
+    &.clipboard {
+        background-image: data-uri("../public/svg/icon-clipboard.svg");
+    }
+    &.cpd {
+        background-image: data-uri("../public/svg/icon-cpd.svg");
+    }
+    &.expand::after {
+        background-image: data-uri("../public/svg/icon-collapse.svg");
+    }
+    &.collapsed::after {
+        background-image: data-uri("../public/svg/icon-expand.svg");
+    }
+    &.small {
+        height: 20px;
+        width: 20px;
+        position: relative;
+        top: -2px;
+    }
+}
+
+.social-icon {
+    .hide-text();
+    .default-bg();
+    .lh-background-size(85%);
+    &.twitter {
+        background-image: data-uri("../public/svg/twitter_link.svg");
+    }
+    &.facebook {
+        background-image: data-uri("../public/svg/facebook_link.svg");
+        &.white {
+            background-image: data-uri("../public/svg/facebook_link_white.svg");
+        }
+    }
+    &.linkedin {
+        background-image: data-uri("../public/svg/linkedin_link.svg");
+        &.white {
+            background-image: data-uri("../public/svg/linkedin_link_white.svg");
+        }
+    }
+}

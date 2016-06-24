@@ -1,0 +1,26 @@
+.datelabel {
+    width: 50px;
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+    border:solid 1px @BE-red;
+    .lh-border-radius(8px);
+    h4 {
+        color:@BE-red;
+        font-size: 11px;
+        font-weight: 200;
+        line-height: 18px;
+        padding: 0;
+        margin: 0;
+    }
+    span {
+        display: block;
+        color:@headings-color;
+        line-height: 24px;
+        font-size: 24px;
+        padding:0 0 4px;
+    }
+    @media(max-width: @screen-xs-max) {
+        margin:0 0 15px 0;
+    }
+}

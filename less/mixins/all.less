@@ -1,0 +1,72 @@
+/**
+ * Add all mixins
+ */
+
+//creates blank pseudo element
+.pseudo {
+    content: '';
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    vertical-align: top;
+}
+//vertical align
+.vertical-align{
+    position: absolute !important;
+    top:50%;
+    .lh-transform(translate(0, -50%));
+}
+.vertical-align-parent {
+    display: table;
+}
+.vertical-align-child {
+    display: table-cell;
+    vertical-align: middle;
+}
+//z bomb
+.layer(@x: 0, @y: 0) {
+    .lh-transform(translate(@x, @y));
+}
+//generic text shadow (scaleable)
+.text-shadow (@string: 0 @base-font*0.1 3px rgba(0, 0, 0, 0.6)) {
+    text-shadow: @string;
+}
+//generic text shadow (scaleable)
+.un-text-shadow () {
+    text-shadow: none;
+}
+//360 shadow
+.full-360-shadow(@d: 0.2, @o: 0.08) {
+    box-shadow: 0 0 @base-font*0.5 @base-font*@d rgba(0, 0, 0, @o);
+}
+.hide-text {
+    display: inline-block;
+    overflow: hidden;
+    text-indent: -9999px;
+    vertical-align: middle;
+}
+//collapse element bomb
+.collapseMe {
+    visibility: hidden !important;
+    height: 0 !important;
+    font-size: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+// @AT-image-path: '../img/backgrounds/';
+// //@AT-image-path: 'http://www.altontowers.com/img/backgrounds/';
+// .bgGenerator(@url:''){
+//     .lh-background-image(url('@{AT-image-path}@{url}?w=640&h=640&mode=crop&quality=80'));
+//     @media (orientation: portrait) {
+//         .lh-background-image(url('@{AT-image-path}@{url}?w=640&h=1024&mode=crop&quality=80'));
+//     }
+//     @media (min-width: @screen-sm-min) and (orientation: portrait) {
+//        .lh-background-image(url('@{AT-image-path}@{url}?w=768&h=1024&mode=crop&quality=90'));
+//     }
+//     @media (min-width: @screen-md-min) {
+//        .lh-background-image(url('@{AT-image-path}@{url}?w=1024&h=768&mode=crop&quality=90'));
+//     }
+//     @media (min-width: @screen-lg-min) {
+//        .lh-background-image(url('@{AT-image-path}@{url}?w=1280&h=800&mode=crop&quality=90'));
+//     }
+// }

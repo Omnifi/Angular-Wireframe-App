@@ -1,0 +1,19 @@
+<section class="container" ng-controller="SetupController">
+    <div class="well clearfix">
+        <h1 class="h3">Setup</h1><br/>
+        <form>
+            <div class="form-group">
+                <label>Country</label>
+                <input type="text" class="form-control" ng-model="setup.country">
+            </div>
+            <div class="form-group">
+                <label>Location</label>
+                <input type="text" class="form-control" ng-model="setup.location">
+            </div>
+            <button class="btn btn-default btn-danger" ng-click="update()">Update</button>
+            <button class="btn btn-default btn-primary" ng-click="continue()">Continue</button>
+        </form>
+    </div>
+</section>
+
+

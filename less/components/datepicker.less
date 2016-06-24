@@ -1,0 +1,47 @@
+.datepicker {
+    table {
+        width: 100%;
+        tr {
+            td {
+                background-color: @gray;
+                color: @text-lightest;
+                border: solid 1px @gray-dark;
+                .lh-border-radius(0);
+                &:hover {
+                    color: @gray-dark;
+                }
+                &.disabled, &.past {
+                    background-color: @gray-lighter;
+                    color: @gray-light !important;
+                }
+                &.old, &.new {
+                    background-color: @gray-lighter;
+                    color: @gray;
+                }
+
+            }
+        }
+    }
+}
+.responsive .datepicker table {
+    width: 100%;
+    tr td {
+        &.disabled, &.past {
+            background-color: @gray-lighter !important;
+            color: @gray-dark !important;
+        }
+        &.day {
+            background: @BE-red;
+            color: #fff;
+        }
+        &.today {
+            color: @BE-green !important;
+            font-weight: bold;
+            font-style: italic;
+            text-decoration: underline;
+        }
+    }
+}
+.timepicker-sbs .col-md-6 {
+    width: 50% !important;
+}

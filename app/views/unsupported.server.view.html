@@ -1,0 +1,43 @@
+{% extends 'basic.server.view.html' %}
+{% block content %}
+{% include 'partials/minimal-header.html' %}
+<style>
+	.container{
+		width:960px !important;
+	}
+	.list-unstyled{
+		padding-left:275px !important;
+	}
+	.list-unstyled li{
+		width:174px;
+	}
+	.list-unstyled li + li{
+		width:150px !important;
+	}
+	.list-unstyled img{
+		width:100% !important;
+		height:auto !important;
+	}
+</style>
+<section class="content">
+    <section class="container">
+        <div class="well clearfix">
+            <h1 class="h3 text-center clearfix">Sorry!</h1>
+            <p class="text-center margin-bottom-lg">It looks like you're using an unsupported browser. Please update or install another.</p>
+            <h1 class="h4 text-center">Or download the app for free and enjoy 'be' on the go!</h1>
+            <ul class="list-unstyled list-inline app-store-list margin-top-md clearfix">
+                <li>
+                    <a href="{{app_store_link}}" target="_blank">
+                        <img src="/images/apple_store.png" height="102" width="291" />
+                    </a>
+                </li>
+                <li>
+                    <a href="{{play_store_link}}" target="_blank">
+                        <img src="/images/google_play.png" height="102" width="342" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+</section>
+{% endblock %}

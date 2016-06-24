@@ -1,0 +1,15 @@
+/**
+ * Angular CSS
+ */
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+form {
+    .ng-dirty.ng-invalid, &.ng-submitted .ng-invalid {
+        border-color: @brand-danger;
+    }
+    .ng-dirty.ng-valid, &.ng-submitted .ng-valid {
+        border-color: @brand-info;
+    }
+}

@@ -1,0 +1,36 @@
+<section class="container" ng-controller="PageController">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="h3 text-center">Page</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>You are in the {{$root.country}}</p>
+            <p>And your location is: {{$root.location}}</p>
+            <div class="panel with-nav-tabs panel-default">
+                <div class="panel-heading">
+                    <ul class="nav nav-tabs nav-justified">
+                        <li class="active"><a href="#tab1success" data-toggle="tab">A</a></li>
+                        <li><a href="#tab2success" data-toggle="tab">B</a></li>
+                        <li><a href="#tab3success" data-toggle="tab">C</a></li>
+                    </ul>
+                </div>
+                <div class="panel-body">
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="tab1success">
+                            a
+                        </div>
+                        <div class="tab-pane fade" id="tab2success">
+                            b
+                        </div>
+                        <div class="tab-pane fade" id="tab3success">
+                            c
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <log/>
+</section>
